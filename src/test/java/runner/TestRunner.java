@@ -19,7 +19,7 @@ import static utilities.ScreenShot.takeScreenshot;
         , plugin = {"pretty:target/cucumber-reports/cucumber.txt"
         ,"html:target/cucumber-reports"
         ,"json:target/cucumber.json"}
-        , tags = {"@BackEnd"}//master1
+        , tags = {"@FrontEndTours"}//master1
 )
 
 @Listeners(TestMethodListener.class)

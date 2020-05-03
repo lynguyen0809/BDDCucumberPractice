@@ -1,0 +1,15 @@
+11:46:01 [main] INFO  runner.TestRunner -  ================================Start Cucumber Suite Class=====================================================
+11:46:01 [main] INFO  runner.TestRunner - ------Start Scenario: FE001-Login - Search Tour successfully ---------------------
+11:46:03 [main] WARN  runner.TestRunner - no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(), 'Tours')]/parent::a"}
+  (Session info: chrome=75.0.3770.142)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: '3R2H7S2', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\LYTTNG~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 75.0.3770.142, webStorageEnabled: true}
+Session ID: f6a5eb88579104588e82d173663be78f
+*** Element info: {Using=xpath, value=//*[contains(text(), 'Tours')]/parent::a}
+11:46:03 [main] INFO  runner.TestRunner - ------End Scenario: FE001-Login - Search Tour successfully was FAILED -----------------------
+11:46:04 [main] INFO  runner.TestRunner - =================================End Cucumber Suite Class========================================================

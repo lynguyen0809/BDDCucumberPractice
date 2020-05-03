@@ -16,9 +16,10 @@ public class FELogin extends BasePage {
 
     private Logger log = LogManager.getLogger(FELogin.class);
 
-    private final By txtUername = By.name("username");
+    private final By txtUsername = By.name("username");
     private final By txtPassword = By.name("password");
     private final By btnLogin = By.xpath("//*[@id='loginfrm']/button");
+    private final By btnGotIt = By.id("cookyGotItBtn");
     private String url = "https://www.phptravels.net/";
     private final By ddlMyAccount = By.xpath("//div[contains(@class,'collapse navbar-collapse')]/ul[contains(@class,'nav navbar-nav navbar-right hidden-sm go-left')]//li[@id='li_myaccount']");
     private final By lblLogin = By.xpath("//div[contains(@class,'collapse navbar-collapse')]/ul[contains(@class,'nav navbar-nav navbar-right hidden-sm go-left')]//li[@id='li_myaccount']/ul/li[1]");
@@ -27,7 +28,7 @@ public class FELogin extends BasePage {
     private final String strLblLeftMenuMainPage = "//div[contains(@class,'col-md-1 offset-0')]/ul[contains(@class,'nav profile-tabs')]/li[%]";
 
     public void enterUserName(String userName) {
-        getElement(TextBox.class, txtUername).clearAndSetText(userName);
+        getElement(TextBox.class, txtUsername).clearAndSetText(userName);
     }
 
     public void enterPassWord(String pass) {
@@ -36,6 +37,12 @@ public class FELogin extends BasePage {
 
     public void clickToMainPage() {
         getElement(Button.class, btnLogin).clickAndWait();
+    }
+
+    public void clearCookyBox() {
+        if(getElement(Button.class, btnGotIt).isPresent()) {
+            getElement(Button.class, btnGotIt).clickAndWait();
+        }
     }
 
     public void openLoginPage() {
@@ -58,7 +65,7 @@ public class FELogin extends BasePage {
         String wishList = getElement(Element.class,getXpath(strLblLeftMenuMainPage,"3")).getText().trim();
         String newsLetter = getElement(Element.class,getXpath(strLblLeftMenuMainPage,"4")).getText().trim();
 
-        Asserts.verifyEquals(getElement(Element.class, lblUserNameMainPage).getText(), "Hi, Johny Smith");
+        Asserts.verifyEquals(getElement(Element.class, lblUserNameMainPage).getText(), "Hi, Demo User");
         Asserts.verifyEquals(getElement(Element.class, lblCurrentDate).getText(),getCurrentDate("d MMMMM yyyy"));
 
         Asserts.verifyEquals(bookings,"Bookings");
@@ -66,11 +73,13 @@ public class FELogin extends BasePage {
         Asserts.verifyEquals(wishList,"Wishlist");
         Asserts.verifyEquals(newsLetter,"Newsletter");
 
+        Asserts.verifyEquals(getElement(Element.class,getXpath(strLblLeftMenuMainPage,"1")).getAttribute("class"),"active");
+
         Asserts.verifyAll();
 
     }
 
-    public void verifLoginPage() {
+    public void verifyLoginPage() {
 
         Asserts.verifyEquals(getTitle(), "Login");
         Asserts.verifyEquals(getCurrentURL(), "https://www.phptravels.net/login");

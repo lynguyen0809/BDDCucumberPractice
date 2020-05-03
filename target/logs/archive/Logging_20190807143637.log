@@ -1,0 +1,4 @@
+14:36:37 [main] INFO  runner.TestRunner - =================================End Cucumber Suite Class========================================================
+14:36:37 [TestNG-PoolService-0] INFO  bases.Hook - ------End Scenario: BE002-Login-Login to page unsuccessful -----------------------
+14:36:37 [TestNG-PoolService-1] INFO  bases.Hook - ------End Scenario: BE002-Login-Login to page unsuccessful -----------------------
+14:36:37 [TestNG-PoolService-2] INFO  bases.Hook - ------End Scenario: FE001-Login - Login successful -----------------------

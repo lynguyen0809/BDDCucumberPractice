@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2019-08-15T08:56:25Z" name="Surefire suite" finished-at="2019-08-15T08:56:30Z" duration-ms="5375">
+    <groups>
+      <group name="cucumber">
+        <method signature="TestRunner.scenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.TestRunner@5170bcf4]" name="scenario" class="runner.TestRunner"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2019-08-15T08:56:25Z" name="Surefire test" finished-at="2019-08-15T08:56:30Z" duration-ms="5375">
+      <class name="runner.TestRunner">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:runner.TestRunner@5170bcf4]" started-at="2019-08-15T08:56:25Z" name="setUpClass" finished-at="2019-08-15T08:56:27Z" duration-ms="2604" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="scenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.TestRunner@5170bcf4]" started-at="2019-08-15T08:56:27Z" name="scenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-08-15T08:56:29Z" duration-ms="2030" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["FE001-Login - Search Tour successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["FrontEnd - Tour"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Must provide a location for a move action.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Must provide a location for a move action.
+at org.openqa.selenium.interactions.MoveMouseAction.<init>(MoveMouseAction.java:38)
+at org.openqa.selenium.interactions.Actions.moveToElement(Actions.java:387)
+at elements.controllerImpl.Element.hoverAndClick(Element.java:35)
+at pages.FEHome.navigateToTourListing(FEHome.java:21)
+at stepDefs.FETourStep.userOnTheFrontEndTourListingPage(FETourStep.java:33)
+at ✽.User on the Front-End Tour Listing page(src/test/resources/features/FETour.feature:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- scenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@5170bcf4]" started-at="2019-08-15T08:56:29Z" name="tearDownClass" finished-at="2019-08-15T08:56:30Z" duration-ms="694" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.TestRunner -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

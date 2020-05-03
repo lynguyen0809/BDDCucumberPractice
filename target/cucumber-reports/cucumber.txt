@@ -1,0 +1,20 @@
+@FrontEndTours
+Feature: FrontEnd - Tour
+  As a user, I want to search tour(s) with search filters such as Star Grade, Price Range and Tour Type
+
+  Background:                             [90m# src/test/resources/features/FETour.feature:6[0m
+    [32mGiven [0m[32mUser on the Front-End Home page[0m [90m# FETourStep.userOnTheFrontEndHomePage(DataTable)[0m
+
+  @FrontEndTours @FETours
+  Scenario: FE001-Login - Search Tour successfully                                                               [90m# src/test/resources/features/FETour.feature:11[0m
+    [31mAnd [0m[31mUser on the Front-End Tour Listing page[0m                                                                  [90m# FETourStep.userOnTheFrontEndTourListingPage()[0m
+      [31mjava.lang.IllegalArgumentException: Must provide a location for a move action.
+	at org.openqa.selenium.interactions.MoveMouseAction.<init>(MoveMouseAction.java:38)
+	at org.openqa.selenium.interactions.Actions.moveToElement(Actions.java:387)
+	at elements.controllerImpl.Element.hoverAndClick(Element.java:35)
+	at pages.FEHome.navigateToTourListing(FEHome.java:21)
+	at stepDefs.FETourStep.userOnTheFrontEndTourListingPage(FETourStep.java:33)
+	at ✽.User on the Front-End Tour Listing page(src/test/resources/features/FETour.feature:12)
+[0m
+    [36mWhen [0m[36mUser search tour with tourType is [0m[36m[1m"Holidays"[0m[36m and starGrade is [0m[36m[1m"3"[0m[36m and priceFrom is [0m[36m[1m30[0m[36m and priceTo is [0m[36m[1m70[0m [90m# FETourStep.userSearchTour(String,String,int,int)[0m
+    [36mThen [0m[36mUser should see the result with appropriate selected filters[0m                                            [90m# FETourStep.userShouldSeeTheResultWithAppropriateSelectedFilters()[0m

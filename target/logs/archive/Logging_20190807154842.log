@@ -1,0 +1,5 @@
+15:48:24 [main] INFO  runner.TestRunner -  ================================Start Cucumber Suite Class=====================================================
+15:48:24 [main] INFO  runner.TestRunner - ------Start Scenario: FE001-Login - Login successful ---------------------
+15:48:41 [main] ERROR assertion.Asserts - [Assert Fail] -  expected [true] but found [false]
+15:48:41 [main] INFO  runner.TestRunner - ------End Scenario: FE001-Login - Login successful was FAILED -----------------------
+15:48:42 [main] INFO  runner.TestRunner - =================================End Cucumber Suite Class========================================================

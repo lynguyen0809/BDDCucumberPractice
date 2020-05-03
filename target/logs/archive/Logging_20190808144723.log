@@ -1,0 +1,4 @@
+14:47:06 [main] INFO  runner.TestRunner -  ================================Start Cucumber Suite Class=====================================================
+14:47:06 [main] INFO  runner.TestRunner - ------Start Scenario: FE001-Login - Search Tour successfully ---------------------
+14:47:22 [main] INFO  runner.TestRunner - ------End Scenario: FE001-Login - Search Tour successfully was FAILED -----------------------
+14:47:23 [main] INFO  runner.TestRunner - =================================End Cucumber Suite Class========================================================

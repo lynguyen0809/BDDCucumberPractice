@@ -21,7 +21,7 @@ import static utilities.Contants.TIMEOUT_SECOND;
 public class BasePage {
 
     public WebDriver driver = null;
-    private WebElement elementnull =null;
+    private WebElement elementnull = null;
     public Logger log = LogManager.getLogger(TestRunner.class);
 
     WebDriverWait wait;

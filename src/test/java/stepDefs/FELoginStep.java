@@ -5,6 +5,7 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import elements.controllerImpl.Button;
 import io.cucumber.datatable.DataTable;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -27,7 +28,7 @@ public class FELoginStep {
     @Given("^User on the Front-End Login Page$")
     public void userOnTheFrontEndLoginPage() {
         login.openLoginPage();
-        login.verifLoginPage();
+        login.verifyLoginPage();
     }
 
     @When("^User log in$")
@@ -36,6 +37,7 @@ public class FELoginStep {
         List<List<String>> data = userData.cells();
         login.enterUserName(data.get(0).get(0));
         login.enterPassWord(data.get(0).get(1));
+        login.clearCookyBox();
         login.clickToMainPage();
     }
 

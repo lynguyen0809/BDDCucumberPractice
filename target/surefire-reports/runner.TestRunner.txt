@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: runner.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 6.601 sec <<< FAILURE! - in runner.TestRunner
+scenario(runner.TestRunner)  Time elapsed: 2.034 sec  <<< FAILURE!
+java.lang.IllegalArgumentException: Must provide a location for a move action.
+
